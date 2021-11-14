@@ -53,10 +53,9 @@ class SleepTrackerFragment : Fragment() {
 
         val viewModelFactory = SleepTrackerViewModelFactory(dataSource, application)
 
-        val sleepTrackerViewModel =
-            ViewModelProviders.of(
-                this, viewModelFactory).get(SleepTrackerViewModel::class.java
-            )
+        val sleepTrackerViewModel = ViewModelProvider(this)
+            .get(SleepTrackerViewModel::class.java)
+
 
         binding.sleepTrackerViewModel = sleepTrackerViewModel
 
