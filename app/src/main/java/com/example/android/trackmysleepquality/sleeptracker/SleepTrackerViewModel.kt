@@ -103,12 +103,12 @@ class SleepTrackerViewModel(
 
         fun onClear() {
                 uiScope.launch {
-                        onClear()
+                        clear()
                         tonight.value = null
                 }
         }
 
-        suspend fun clear() {
+        private suspend fun clear() {
                 withContext(Dispatchers.IO) {
                         database.clear()
                 }
