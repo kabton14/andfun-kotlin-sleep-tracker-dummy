@@ -98,6 +98,7 @@ class SleepTrackerViewModel(
                         oldNight.endTimeMilli = System.currentTimeMillis()
 
                         update(oldNight)
+                        _navigateToSleepQuality.value = oldNight
                 }
         }
 
