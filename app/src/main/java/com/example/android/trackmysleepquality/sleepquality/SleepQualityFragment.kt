@@ -47,6 +47,8 @@ class SleepQualityFragment : Fragment() {
 
         val application = requireNotNull(this.activity).application
 
+        val arguments = SleepQualityFragmentArgs.fromBundle(arguments!!)
+
         return binding.root
     }
 }
